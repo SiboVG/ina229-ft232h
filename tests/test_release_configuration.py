@@ -21,6 +21,8 @@ class ReleaseConfigurationTests(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         self.assertIn("id-token: write", workflow)
+        self.assertIn("actions/upload-artifact@v7", workflow)
+        self.assertIn("actions/download-artifact@v8", workflow)
         self.assertIn("pypa/gh-action-pypi-publish@release/v1", workflow)
         self.assertIn("name: testpypi", workflow)
         self.assertIn("name: pypi", workflow)
