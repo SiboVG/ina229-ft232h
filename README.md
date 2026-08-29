@@ -6,7 +6,13 @@ Adafruit Blinka and pyftdi.
 
 ## Installation
 
-For local development:
+Install the released package from PyPI:
+
+```bash
+python -m pip install ina229-ft232h
+```
+
+For local development, clone the repository and install it in editable mode:
 
 ```bash
 python -m pip install -e .
@@ -86,3 +92,6 @@ without three-phase emulation. Override it with
 ```bash
 python -m unittest discover -v
 ```
+
+Release maintainers can find the trusted-publishing setup and release process
+in [RELEASING.md](RELEASING.md).

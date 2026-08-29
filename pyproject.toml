@@ -7,8 +7,13 @@ name = "ina229-ft232h"
 version = "0.1.0"
 description = "INA229 power monitor driver with an FT232H SPI helper"
 readme = "README.md"
+authors = [
+    { name = "Sibo Van Gool" },
+]
+keywords = ["ina229", "ft232h", "spi", "power-monitor", "current-monitor"]
 license = "MIT"
-requires-python = ">=3.9"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
 dependencies = [
     "adafruit-blinka>=8.0",
     "pyftdi>=0.55",
@@ -19,8 +24,23 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: System :: Hardware :: Hardware Drivers",
 ]
+
+[project.optional-dependencies]
+test = [
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = "https://github.com/SiboVG/ina229-ft232h"
+Source = "https://github.com/SiboVG/ina229-ft232h"
+Issues = "https://github.com/SiboVG/ina229-ft232h/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ina229_ft232h"]
